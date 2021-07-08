@@ -38,13 +38,15 @@ console.log(result);
 // We can pass function as an return
 function base(b) {
     return function(n) {
-        let result = 1;
-        for(let i=0; i<b; i++) {
+        var result = 1;
+        for(var i=0; i<b; i++) {
             result *= n;
         }
         return result;
     }
 }
-const power = base(2);
-const result = power(5);
-result
+// var power = base(2);
+// var resultt = power(5);
+
+var calcResult = base(2)(3)
+calcResult;
