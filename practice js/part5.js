@@ -19,22 +19,35 @@ function hello(name, print) {
 //     console.log("the length of" + name + "is =" + name.length);
 // })
 
-const me = {
-    name: "Fayal Khan",
-    age: 12,
-    email: "mdfaysalkhancse@gmail.com"
-}
+// const me = {
+//     name: "Fayal Khan",
+//     age: 12,
+//     email: "mdfaysalkhancse@gmail.com"
+// }
 
-function aboutMyself(person, callback) {
-    console.log("person : " + person.name + " " + "(" + person.age + ")"  );
-    if(person.age>= 18){
-        callback(person.email)
-    } else {
-        console.log("you are not maturate age");
-    }
+// function aboutMyself(person, callback) {
+//     console.log("person : " + person.name + " " + "(" + person.age + ")"  );
+//     if(person.age>= 18){
+//         callback(person.email)
+//     } else {
+//         console.log("you are not maturate age");
+//     }
+// }
+// aboutMyself(me, function(email){
+//     console.log("Email sent to : " + email);
+// })
+function print(data, callback1, callback2) {
+    console.log("original data : " + data);
+    callback1(data)
+    callback2(data)
 }
-aboutMyself(me, function(email){
-    console.log("Email sent to : " + email);
+print("This is constant output",function(data){
+    var data = data.toUpperCase();
+    console.log("Uppercase :" + data);
+},function(data){
+    var data = data.toLowerCase();
+    console.log("Uppercase :" + data);
+    console.log("length :" + data.length);
 })
    
 
