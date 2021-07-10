@@ -26,5 +26,5 @@ function add (a, b){
     }
     return sum() + sub() + div() + mul();
 }
-let result = add(10, 20);
+const result = add(10, 20);
 console.log(result);
