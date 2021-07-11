@@ -1,4 +1,4 @@
-// js sort array of object and array
+// js sort array of object and array using callback
 // sort array
 // const age = [74,73,20,75,5,848,82];
 // age.sort(function(a, b){
